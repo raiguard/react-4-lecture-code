@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      pokemon: {},
+      pokeId: 1
+    }
+  }
+
+  render(){
+    return (
+      <div className='App'>
+        <img className='pokemon-logo' src='https://1000logos.net/wp-content/uploads/2017/05/Pokemon-Logo.png' alt='Pokemon'/>
+        <br/>
+        <img className='pokedex' src='https://bonnichiwa.github.io/interactive-game-app/images/pokedex2.png' alt='pokedex'/>
+      </div>
+    )
+  }
 }
 
 export default App;
